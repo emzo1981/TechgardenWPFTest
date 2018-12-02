@@ -1,10 +1,26 @@
 ﻿<Window x:Class="TechgardenWPFTest.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="{Binding Title}" Height="350" Width="525">
+        Title="{Binding Title}"
+        WindowStartupLocation="CenterScreen"
+        Height="650"
+        Width="925">
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="155*" />
+        </Grid.ColumnDefinitions>
+        <ContentControl Grid.Column="0"
+                        Margin="10,40,10,10"
+                        prism:RegionManager.RegionName="NaviRegion"
+                        >           
+        </ContentControl>
+        <ContentControl Grid.Column="1"
+                        prism:RegionManager.RegionName="ContentRegion"
+                       >
+        </ContentControl>
     </Grid>
 </Window>

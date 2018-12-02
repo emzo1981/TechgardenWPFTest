@@ -1,29 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using CommonServiceLocator;
 using Prism.Mvvm;
+using Prism.Regions;
+using TechgardenWPFTest.Helpers;
 using TechgardenWPFTest.Models;
 using TechgardenWPFTest.Services;
+using TechgardenWPFTest.Views;
 
 namespace TechgardenWPFTest.ViewModels
 {
-    public class MainWindowViewModel : BindableBase
+    public class MainWindowViewModel : BaseViewModel
     {
-        private IDataService _dataService;
-        public MainWindowViewModel(IDataService dataService)
+        private IRegionManager _regionManager;
+        public MainWindowViewModel()
         {
-            _dataService = dataService;
-            GetApiData();
-        }
-
-        private async void GetApiData()
-        {
-            Vehicles = await _dataService.GetVehicles();
-        }
-        private IEnumerable<Vehicle> _vehicles;
-        public IEnumerable<Vehicle> Vehicles
-        {
-            get { return _vehicles; }
-            set { SetProperty(ref _vehicles, value); }
+            _regionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
+            _regionManager.RegisterViewWithRegion("NaviRegion", typeof(NavigationView));           
+            _regionManager.RegisterViewWithRegion("ContentRegion", typeof(VehiclesView));
+          
         }
 
         private string _title = "Techgarden Application";

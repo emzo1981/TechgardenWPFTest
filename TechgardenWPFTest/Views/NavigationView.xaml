@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="TechgardenWPFTest.Views.NavigationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:TechgardenWPFTest.Views"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="100">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <telerik:RadTreeView  ItemsSource="{Binding NavigationTree}"
+                              ItemContainerStyle="{DynamicResource ItemContainerStyle}"
+                              SelectedItem="{Binding SelectedNode, Mode=TwoWay}">
+            <!--<telerik:RadTreeView.Items>
+                <telerik:RadTreeViewItem Header="Football" />
+                <telerik:RadTreeViewItem Header="Tennis" />
+                <telerik:RadTreeViewItem Header="Cycling" />
+                <telerik:RadTreeViewItem Header="Basketball" />
+            </telerik:RadTreeView.Items>-->
+        </telerik:RadTreeView>
+    </Grid>
+</UserControl>

@@ -4,6 +4,9 @@ using Prism.Modularity;
 using System.Windows;
 using Prism.Unity;
 using TechgardenWPFTest.Services;
+using Unity;
+using CommonServiceLocator;
+using Telerik.Windows.Controls;
 
 namespace TechgardenWPFTest
 {
@@ -15,12 +18,15 @@ namespace TechgardenWPFTest
         protected override Window CreateShell()
         {
             return Container.Resolve<MainWindow>();
+
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterInstance<IDataService>(new DataService(new ApiClient()));
 
+            //StyleManager.ApplicationTheme = new VistaTheme();
+            containerRegistry.RegisterInstance<IDataService>(new DataService(new ApiClient()));
         }
+        
     }
 }
