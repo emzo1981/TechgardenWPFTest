@@ -2,13 +2,15 @@
 using Prism.Ioc;
 using Prism.Modularity;
 using System.Windows;
+using Prism.Unity;
+using TechgardenWPFTest.Services;
 
 namespace TechgardenWPFTest
 {
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App
+    public partial class App 
     {
         protected override Window CreateShell()
         {
@@ -17,6 +19,7 @@ namespace TechgardenWPFTest
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterInstance<IDataService>(new DataService(new ApiClient()));
 
         }
     }
