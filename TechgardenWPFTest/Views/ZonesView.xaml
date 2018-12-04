@@ -1,0 +1,118 @@
+﻿<UserControl x:Class="TechgardenWPFTest.Views.ZonesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:TechgardenWPFTest.Views"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid>
+        <telerik:RadGridView Grid.Row="1"
+                             MinHeight="150"
+                             x:Name="radGridView"
+                             HorizontalAlignment="Stretch"
+                             VerticalAlignment="Stretch"
+                             AutoExpandGroups="True"
+                             AutoGenerateColumns="false"
+                             GroupRenderMode="Flat"                          
+                             IsReadOnly="True"
+                             ItemsSource="{Binding Zones, IsAsync=True}"
+                             RowDetailsVisibilityMode="VisibleWhenSelected"                           
+                             SelectionMode="Single"
+                             SelectionUnit="FullRow"
+                             ShowGroupPanel="False"
+                             >       
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn Header="Name"
+                                            DataMemberBinding="{Binding Name, IsAsync=True}" />              
+
+            </telerik:RadGridView.Columns>
+            <telerik:RadGridView.RowDetailsTemplate>
+                <DataTemplate>
+                    <telerik:RadTabControl Margin="10">
+                        <telerik:RadTabControl.Items>
+                            <telerik:RadTabItem Header="AllowedAreas">
+                                <telerik:RadTabItem.Content>
+                                    <telerik:RadGridView x:Name="radGridViewAllowedAreas"
+                                                         AutoGenerateColumns="false"
+                                                         GroupRenderMode="Flat"
+                                                         IsReadOnly="True"
+                                                         ItemsSource="{Binding AllowedAreas}"
+                                                         RowDetailsVisibilityMode="VisibleWhenSelected"
+                                                         ShowGroupPanel="False"
+                                                         ValidatesOnDataErrors="InEditMode">
+                                        <telerik:RadGridView.Columns>
+                                            <telerik:GridViewDataColumn Header="Name"
+                                                                        DataMemberBinding="{Binding Name, IsAsync=True}" />
+                                        </telerik:RadGridView.Columns>
+                                        <telerik:RadGridView.RowDetailsTemplate>
+                                            <DataTemplate>
+                                                <telerik:RadGridView x:Name="radGridViewAllowedAreasPoints"
+                                                                     AutoGenerateColumns="false"
+                                                                     GroupRenderMode="Flat"
+                                                                     IsReadOnly="True"
+                                                                     ItemsSource="{Binding Points}"
+                                                                     RowDetailsVisibilityMode="VisibleWhenSelected"
+                                                                     ShowGroupPanel="False"
+                                                                     ValidatesOnDataErrors="InEditMode">
+                                                    <telerik:RadGridView.Columns>
+                                                        <telerik:GridViewDataColumn Header="latitude"
+                                                                                    DataMemberBinding="{Binding Latitude, IsAsync=True}" />
+                                                        <telerik:GridViewDataColumn Header="longitude"
+                                                                                    DataMemberBinding="{Binding Longitude, IsAsync=True}" />
+                                                    </telerik:RadGridView.Columns>
+                                                </telerik:RadGridView>
+                                            </DataTemplate>
+                                        </telerik:RadGridView.RowDetailsTemplate>
+
+                                    </telerik:RadGridView>
+                                </telerik:RadTabItem.Content>
+                            </telerik:RadTabItem>
+                            <telerik:RadTabItem Header="ExcludedAreas">
+                                <telerik:RadTabItem.Content>
+                                    <telerik:RadGridView x:Name="radGridViewExcludedAreas"
+                                                         AutoGenerateColumns="false"
+                                                         GroupRenderMode="Flat"
+                                                         IsReadOnly="True"
+                                                         ItemsSource="{Binding ExcludedAreas}"
+                                                         RowDetailsVisibilityMode="VisibleWhenSelected"
+                                                         ShowGroupPanel="False"
+                                                         ValidatesOnDataErrors="InEditMode">
+                                        <telerik:RadGridView.Columns>
+                                            <telerik:GridViewDataColumn Header="Name"
+                                                                        DataMemberBinding="{Binding Name, IsAsync=True}" />
+                                        </telerik:RadGridView.Columns>
+                                        <telerik:RadGridView.RowDetailsTemplate>
+                                            <DataTemplate>
+                                                <telerik:RadGridView x:Name="radGridViewAllowedAreasPoints"
+                                                                     AutoGenerateColumns="false"
+                                                                     GroupRenderMode="Flat"
+                                                                     IsReadOnly="True"
+                                                                     ItemsSource="{Binding Points}"
+                                                                     RowDetailsVisibilityMode="VisibleWhenSelected"
+                                                                     ShowGroupPanel="False"
+                                                                     ValidatesOnDataErrors="InEditMode">
+                                                    <telerik:RadGridView.Columns>
+                                                        <telerik:GridViewDataColumn Header="latitude"
+                                                                                    DataMemberBinding="{Binding Latitude, IsAsync=True}" />
+                                                        <telerik:GridViewDataColumn Header="longitude"
+                                                                                    DataMemberBinding="{Binding Longitude, IsAsync=True}" />
+                                                    </telerik:RadGridView.Columns>
+                                                </telerik:RadGridView>
+                                            </DataTemplate>
+                                        </telerik:RadGridView.RowDetailsTemplate>
+
+
+                                    </telerik:RadGridView>
+                                </telerik:RadTabItem.Content>
+                            </telerik:RadTabItem>
+                        </telerik:RadTabControl.Items>
+                    </telerik:RadTabControl>
+                </DataTemplate>
+            </telerik:RadGridView.RowDetailsTemplate>
+        </telerik:RadGridView>
+    </Grid>
+</UserControl>

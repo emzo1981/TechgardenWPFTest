@@ -6,20 +6,20 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/System.Windows.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.Data.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.DataVisualization.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.GridView.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.FixedDocumentViewers.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.ImageEditor.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.Input.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.Navigation.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.RibbonView.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.RichTextBoxUI.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.ScheduleView.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Controls.Spreadsheet.xaml" />
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Office2016;component/Themes/Telerik.Windows.Documents.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/System.Windows.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Controls.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Controls.Data.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Controls.DataVisualization.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Controls.GridView.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Controls.FixedDocumentViewers.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Controls.ImageEditor.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Controls.Input.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Controls.Navigation.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Controls.RibbonView.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Controls.RichTextBoxUI.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Controls.ScheduleView.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Controls.Spreadsheet.xaml" />
+                <ResourceDictionary Source="/Telerik.Windows.Themes.Summer;component/Themes/Telerik.Windows.Documents.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 

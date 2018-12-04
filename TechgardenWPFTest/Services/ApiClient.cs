@@ -11,7 +11,7 @@ namespace TechgardenWPFTest.Services
     public class ApiClient : IApiClient
     {
         private readonly HttpClient _httpClient;
-        private Uri BaseEndpoint { get; set; }
+        public Uri BaseEndpoint { get; set; }
 
         public ApiClient()
         {
@@ -23,7 +23,7 @@ namespace TechgardenWPFTest.Services
             var response = await _httpClient.GetAsync(requestUrl, HttpCompletionOption.ResponseHeadersRead);
             if (!response.IsSuccessStatusCode)
             {
-                throw new Exception(response.ReasonPhrase);
+                throw new HttpRequestException(response.StatusCode.ToString());
             }
             response.EnsureSuccessStatusCode();
             var data = await response.Content.ReadAsStringAsync();

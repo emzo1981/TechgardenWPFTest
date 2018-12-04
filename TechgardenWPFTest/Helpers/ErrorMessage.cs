@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 
 namespace TechgardenWPFTest.Helpers
 {
-    public class ErrorMessage : PubSubEvent { }
+    public class ErrorMessage : PubSubEvent<string> { }
 }

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace TechgardenWPFTest.Models
 {
-    public class Picture
+    public class Zone
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public string Extension { get; set; }
-        public string ContentType { get; set; }
+        public IEnumerable<Area> AllowedAreas { get; set; }
+        public IEnumerable<Area> ExcludedAreas { get; set; }
+
     }
 }

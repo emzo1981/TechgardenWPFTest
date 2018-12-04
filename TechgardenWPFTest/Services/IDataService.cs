@@ -7,5 +7,8 @@ namespace TechgardenWPFTest.Services
     public interface IDataService
     {
         Task<IEnumerable<Vehicle>> GetVehicles();
+        Task<IEnumerable<Parking>> GetParkings();
+        Task<IEnumerable<Zone>> GetZones();
+        Task<ApiFiltersResponse> GetFilters();
     }
 }

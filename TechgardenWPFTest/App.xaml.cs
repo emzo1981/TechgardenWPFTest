@@ -24,8 +24,11 @@ namespace TechgardenWPFTest
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
 
-            //StyleManager.ApplicationTheme = new VistaTheme();
-            containerRegistry.RegisterInstance<IDataService>(new DataService(new ApiClient()));
+            StyleManager.ApplicationTheme = new MaterialTheme();           
+            containerRegistry.RegisterInstance<IDataService>(new DataService(new ApiClient()));           
+            containerRegistry.RegisterForNavigation<VehiclesView>("VehiclesView");
+            containerRegistry.RegisterForNavigation<ZonesView>("ZonesView");
+            containerRegistry.RegisterForNavigation<ParkingView>("ParkingView");
         }
         
     }

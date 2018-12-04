@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="TechgardenWPFTest.Views.ParkingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:TechgardenWPFTest.Views"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid>
+        <telerik:RadGridView Grid.Row="1"
+                             MinHeight="150"
+                             x:Name="radGridView"
+                             HorizontalAlignment="Stretch"
+                             VerticalAlignment="Stretch"
+                             AutoExpandGroups="True"
+                             AutoGenerateColumns="false"
+                             GroupRenderMode="Flat"
+                             IsBusy="{Binding ParkingList.IsBusy}"
+                             IsReadOnly="True"
+                             ItemsSource="{Binding ParkingList, IsAsync=True}"
+                             RowDetailsVisibilityMode="VisibleWhenSelected"                        
+                             SelectionMode="Single"
+                             SelectionUnit="FullRow"
+                             ShowGroupPanel="False"
+                             >
+       
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn Header="Name"
+                                            DataMemberBinding="{Binding Name, IsAsync=True}" />
+                <telerik:GridViewDataColumn Header="Description"
+                                            DataMemberBinding="{Binding Description, IsAsync=True}" />
+                <telerik:GridViewDataColumn Header="SpacesCount"
+                                            DataMemberBinding="{Binding SpacesCount, IsAsync=True}" />
+                <telerik:GridViewDataColumn Header="AvailableSpacesCount"
+                                            DataMemberBinding="{Binding AvailableSpacesCount, IsAsync=True}" />
+                <telerik:GridViewDataColumn Header="Street"
+                                            DataMemberBinding="{Binding Address.Street, IsAsync=True}" />
+                <telerik:GridViewDataColumn Header="House"
+                                            DataMemberBinding="{Binding Address.House, IsAsync=True}" />
+                <telerik:GridViewDataColumn Header="City"
+                                            DataMemberBinding="{Binding Address.City, IsAsync=True}" />
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+    </Grid>
+</UserControl>

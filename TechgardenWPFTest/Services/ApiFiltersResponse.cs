@@ -7,10 +7,9 @@ using TechgardenWPFTest.Models;
 
 namespace TechgardenWPFTest.Services
 {
-    public class ApiResponse
+    public class ApiFiltersResponse
     {
-        public IEnumerable<Vehicle> Vehicles { get; set; }
-        public IEnumerable<Parking> Parking { get; set; }
-        public IEnumerable<Zone> Zones { get; set; }
+        public Filter Filters { get; set; }
+      
     }
 }

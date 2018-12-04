@@ -9,7 +9,7 @@ namespace TechgardenWPFTest.Models
 {
     public class Vehicle : INotifyPropertyChanged
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string PlatesNumber { get; set; }
         public string SideNumber { get; set; }
@@ -21,7 +21,6 @@ namespace TechgardenWPFTest.Models
         public string Status { get; set; }
         public string LocationDescription { get; set; }
         public string Address { get; set; }
-        public string Promotion { get; set; }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -6,13 +6,17 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}"
         WindowStartupLocation="CenterScreen"
-        Height="650"
+        Height="650"   
         Width="925">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="155*" />
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
         <ContentControl Grid.Column="0"
                         Margin="10,40,10,10"
                         prism:RegionManager.RegionName="NaviRegion"
@@ -22,5 +26,6 @@
                         prism:RegionManager.RegionName="ContentRegion"
                        >
         </ContentControl>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding ErrorMsg}"></TextBlock>
     </Grid>
 </Window>

@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechgardenWPFTest", "TechgardenWPFTest\TechgardenWPFTest.csproj", "{8D45A0A9-160F-45AA-A590-6249BFE25C25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VozillaService", "Service\VozillaService.csproj", "{60ECE949-BE28-4C04-9EE7-794DB5B2294E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{ADA87F92-DEA6-4129-8045-92B86A8F6CA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{8D45A0A9-160F-45AA-A590-6249BFE25C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D45A0A9-160F-45AA-A590-6249BFE25C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D45A0A9-160F-45AA-A590-6249BFE25C25}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60ECE949-BE28-4C04-9EE7-794DB5B2294E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60ECE949-BE28-4C04-9EE7-794DB5B2294E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60ECE949-BE28-4C04-9EE7-794DB5B2294E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60ECE949-BE28-4C04-9EE7-794DB5B2294E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA87F92-DEA6-4129-8045-92B86A8F6CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA87F92-DEA6-4129-8045-92B86A8F6CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA87F92-DEA6-4129-8045-92B86A8F6CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA87F92-DEA6-4129-8045-92B86A8F6CA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

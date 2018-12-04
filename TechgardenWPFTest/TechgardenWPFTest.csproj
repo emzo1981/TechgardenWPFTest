@@ -232,18 +232,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\VehicleStatusConverter.cs" />
     <Compile Include="Helpers\BaseViewModel.cs" />
     <Compile Include="Helpers\ErrorMessage.cs" />
+    <Compile Include="Helpers\VehicleWrapper.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Area.cs" />
+    <Compile Include="Models\Charger.cs" />
+    <Compile Include="Models\Color.cs" />
+    <Compile Include="Models\Filter.cs" />
     <Compile Include="Models\NavigationNode.cs" />
+    <Compile Include="Models\Parking.cs" />
+    <Compile Include="Models\VehicleModel.cs" />
+    <Compile Include="Models\Zone.cs" />
+    <Compile Include="Services\ApiFiltersResponse.cs" />
+    <Compile Include="ViewModels\ParkingViewModel.cs" />
+    <Compile Include="ViewModels\ZonesViewModel.cs" />
     <Compile Include="ViewModels\VehiclesViewModel.cs" />
     <Compile Include="ViewModels\NavigationViewModel.cs" />
+    <Compile Include="Views\ParkingView.xaml.cs">
+      <DependentUpon>ParkingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ZonesView.xaml.cs">
+      <DependentUpon>ZonesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\VehiclesView.xaml.cs">
       <DependentUpon>VehiclesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\NavigationView.xaml.cs">
       <DependentUpon>NavigationView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Styles\Styles.xaml">
+    <Page Include="Resources\Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -269,6 +288,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\ParkingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ZonesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\VehiclesView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
