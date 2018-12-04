@@ -28,12 +28,13 @@ namespace TechgardenWPFTest.ViewModels
         private async void InitComboboxesData()
         {
             var apiFiltersResponse = await _dataService.GetFilters();
+            VehicleModels.Add(new VehicleModel() { Id = null, Name = "" });
 
             foreach (KeyValuePair<Guid, string> vehicleModel in apiFiltersResponse.Filters.VEHICLE_MODEL)
             {                
                 VehicleModels.Add(new VehicleModel() { Id = vehicleModel.Key, Name = vehicleModel.Value });
             }
-
+            VehicleStatuses.Add("");
             foreach (KeyValuePair<string, string> vehicleModel in apiFiltersResponse.Filters.VEHICLE_STATUS)
             {
                 VehicleStatuses.Add(vehicleModel.Key);
